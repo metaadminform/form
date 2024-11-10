@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.forebaby {
+    position: relative;
+}
+
+.forebaby video {
+    background-position: absolute;
+    z-index: 10;
+}
+
+.forebaby  {
+     background-color: #f5f5f5;
+    color: #fff;
+    width: 100%;
+    min-height:51vh;
+    z-index: 20;
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+    text-align: center;
+    font-family: 'PT Sans', sans-serif;
+
+}
+
+.yazi {
+
+padding: 0px 20px 0px 20px;
+    color: #000;
+}
+
+.ibotatlises{
+    background-image: -webkit-linear-gradient(85deg, #6f00ff, #e400ff, #ef9105);
+}
+
+.btn-area{
+          background-color: #eeeff4;
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+}
+
+.forezny-overflow {
+    /* background-image: -webkit-linear-gradient(85deg, #6f00ff, #e400ff, #ef9105); */
+    height: 60vh;
+    /* padding-top: 24px; */
+    overflow:auto;
+    max-height: 60vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* .forezny-overflow .main-content{
+    width: calc(100% - 48px);
+} */
+
+.baslik {
+
+    display: block;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-align: center;
+    color: #558dae;
+    background-color: white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.yazi a {
+    color: #000;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.alt p:nth-child(even) {
+    color: #757575;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-top: -13px;
+    font-size: 16px;
+}
+
+.alt p:nth-child(odd) {
+    color: #9B9B9B;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-size: 15px;
+}
+
+.enalt {
+    background: #eeeff4;
+    width: 100%;
+    height: auto;
+}
+.enalt2 {
+    background: #eeeff4;
+    width: 100%;
+    height: auto;
+}
+
+
+
+.enaltig {
+    background: linear-gradient(90deg, #FF8000, #A200FF, #fff, #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 30px;
+}
+
+.fab {
+    font-size: 40px;
+}
+
+.enaltyazi {
+    margin-left: 30px;
+    color: #4D4D4D;
+    font-size: 15px;
+}
+
+.links {
+    color: #2B2B2B;
+}
+
+.links i {
+    font-size: 25px;
+}
+
+.linksx {
+    margin-left: 30px;
+}
+
+.linksx a {
+    text-decoration: none;
+    color: #2B2B2B;
+}
+
+.dil {
+    margin-left: 30px;
+}
+
+.dil p {
+        font-size: 16px;
+    color: black;
+}
+
+.menulog {
+    border-bottom: 0.5px solid grey;
+}
+
+
+
+.anablock p {
+    padding: 0px 30px 0px 30px;
+}
+
+
+.inputs {
+   display: block;
+    margin-top: 3px;
+    width: 300px;
+    height: 35px;
+    outline: none;
+    border-radius: 5px;
+    background: #e6e6e6;
+    color: #333;
+    font-size: 0.9rem;
+    padding-left: 10px;
+    font-weight: 550;
+    border: 1px solid #cbcbcb;
+    transition: 300ms ease-in-out;
+}
+
+.inputs::placeholder {
+    color: #838383;
+    font-size: 0.9rem; 
+    font-weight: 500;
+    font-family: "PT Sans", Sans-Serif;
+}
+
+.btn {
+    width: 260px;
+    height: 35px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    color: #fff;
+    background: #ffffff57;
+    font-family: "Inter", Sans-Serif;
+    transform: 0.5s;
+}
+
+.btn:hover {
+    background: #fff;
+    color: #000;
+    font-weight: bold;
+}
+
+
+.btn2 {
+    width: 316px;
+    height: 35px;
+    margin-top: 9px;
+    border: 1px solid #1e90ff;
+    border-radius: 5px;
+    color: #fff;
+    background: #1e90ff;
+    font-family: "Inter", Sans-Serif;
+
+}
+.btn3 {
+    width: 260px;
+    height: 35px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #1e90ff;
+    border-radius: 5px;
+    color: #fff;
+    background: #1e90ff;
+    font-family: "Inter", Sans-Serif;
+
+}
+
+.btnx {
+    width: 316px;
+    height: 35px;
+    margin-top: 9px;
+    border: 1px solid #1e90ff;
+    border-radius: 5px;
+    color: #fff;
+    background: #1e90ff;
+    font-family: "Inter", Sans-Serif;
+
+}
+.u{
+    margin-bottom: 10px;
+    color: #1e90ff;
+}
+.kod h2 {
+    padding: 0px 20px 0px 20px;
+}
+
+.kods {
+    width: 300px;
+    height: 100px;
+    background: linear-gradient(to right, #FF5200 0%, #AB00FF 100%);
+    border-radius: 10px;
+}
+
+.kods p {
+    margin-top: -12px;
+    color: #fff;
+}
+
+form:invalid input[type="submit"] {
+    pointer-events: none;
+    opacity: .3;
+}
+
+form:valit input[type="submit"] {
+    pointer-events: initial;
+    opacity: 1;
+}
+
+.yazi p {
+    padding: 0px 20px 20px 20px;
+    color: #938888;
+}
